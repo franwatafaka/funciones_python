@@ -12,12 +12,20 @@ import random
 
 # --------------------------------
 # Aquí dentro definir la función contar
+def contar(lista,el_buscar):
 
-
+    cantidad = lista.count(el_buscar)
+    return cantidad
 
 # Aquí copiar la función lista_aleatoria
 # ya elaborada
-
+def lista_aleatoria(inicio, fin, cantidad):
+    listado_random = []
+    for cant in range(cantidad):
+        numero = random.randrange(inicio, fin+1)
+        listado_random.append(numero)
+    
+    return listado_random
 
 # --------------------------------
 
@@ -36,11 +44,11 @@ if __name__ == '__main__':
     # un rango de 1 a 9 inclusive
 
     # lista_numeros = lista_aleatoria(inicio, fin, cantidad)
-
+    lista_numeros = lista_aleatoria(inicio, fin, cantidad)
     # Generar una una nueva funcion que se llame "contar",
     # que cuente la cantidad de veces que un elemento pasado
     # por parámetro se repite en la lista también pasada por parámetro
-    
+    print('lista_numeros : ',lista_numeros)
     # Para saber cuantas veces se repiten el elemento pasado
     # en la lista pueden usar el método nativo de list "count"
 
@@ -48,9 +56,10 @@ if __name__ == '__main__':
     
     # Luego quiero averiguar cuantas veces se repite el numero 3
     # cantidad_tres = contar(lista_numeros, 3)
-
+    cantidad_tres = contar(lista_numeros, 3)
     # Luego de crear la función invocarla en este lugar:
     # Averiguar cuantas veces se repite el numero 3
+
 
     # cantidad_tres = contar(lista_numeros, 3)
 
@@ -58,5 +67,5 @@ if __name__ == '__main__':
     # cuantas veces se repite el tres en la lista
 
     # print(cantidad_tres)
-
+    print(cantidad_tres)
     print("terminamos")
